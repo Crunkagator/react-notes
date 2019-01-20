@@ -198,12 +198,18 @@ class NotesApp extends Component {
   }
 
   render() {
-    const NoteCounter = this.state.data.length ? React.createElement("div", null, "Notes count: ", this.state.data.length) : React.createElement("div", null, "No notes around here");
+    const NoteCounter = this.state.data.length ? React.createElement("div", {
+      className: "Note--count"
+    }, "Notes count: ", this.state.data.length) : React.createElement("div", {
+      className: "Note--count"
+    }, "No notes around here");
     return React.createElement("div", {
       className: "App"
     }, React.createElement("header", {
       className: "App-header"
-    }, React.createElement("h1", null, React.createElement(FontAwesomeIcon, {
+    }, React.createElement("h1", {
+      className: "App-title"
+    }, React.createElement(FontAwesomeIcon, {
       icon: "file-code"
     }), " React Notes"), React.createElement("div", null, this.state.error), React.createElement(InputControls, {
       inputHandler: this.inputHandler,

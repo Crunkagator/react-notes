@@ -190,14 +190,14 @@ class NotesApp extends Component {
 
   render() {
     const NoteCounter = this.state.data.length ? (
-      <div>Notes count: {this.state.data.length}</div>
+      <div className='Note--count'>Notes count: {this.state.data.length}</div>
     ) : (
-      <div>No notes around here</div>
+      <div className='Note--count'>No notes around here</div>
     );
     return (
       <div className='App'>
         <header className='App-header'>
-          <h1>
+          <h1 className='App-title'>
             <FontAwesomeIcon icon='file-code' /> React Notes
           </h1>
           <div>{this.state.error}</div>
