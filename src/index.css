@@ -84,8 +84,22 @@ body {
   flex-wrap: nowrap;
 }
 
+.Controls > *:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.Controls > button:hover {
+  background-color: #c5c5c5;
+}
+
 button {
   padding: 0 0;
+  transition: .2s;
+}
+
+:disabled {
+  pointer-events: none;
 }
 
 input {
@@ -97,6 +111,7 @@ input {
 .Controls--editMode {
   height: 32px;
   font-size: 0.9rem;
+  border: 0;
 }
 
 .Controls--submitMode {
@@ -107,8 +122,14 @@ input {
   width: 80px;
 }
 
+.Controls--editMode:last-child {
+  box-shadow: inset 1px 0 0 0 #9f9ea2;
+}
+
 .Controls--input {
   width: 640px;
+  border: 0;
+  padding-left: 5px;
 }
 
 *,

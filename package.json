@@ -15,7 +15,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "jsx2js": "./node_modules/.bin/babel --plugins @babel/transform-react-jsx ./src/react.jsx -o ./src/index.js -w --verbose",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
